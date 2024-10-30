@@ -1,0 +1,37 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:prettier/recommended"],
+  "plugins": ["@typescript-eslint", "prettier", "import"],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "endOfLine": "auto",
+      "singleQuote": true,
+      "semi": true,
+      "trailingComma": "es5",
+      "max-len": ["error", {
+      "code": 120,          
+      "tabWidth": 2,        
+      "ignoreUrls": true,   
+      "ignoreTrailingComments": true,
+      "ignoreStrings": true,  
+      "ignoreRegExpLiterals": true // Игнорировать регулярные выражения
+    }]
+    }],
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "import/order": ["error", {
+      "groups": [["builtin", "external", "internal"]],
+      "newlines-between": "always",
+      "alphabetize": {
+        "order": "asc",
+        "caseInsensitive": true
+      }
+    }],
+    "no-console": "warn",
+    "react/react-in-jsx-scope": "off", 
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
